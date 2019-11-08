@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       // N-1. Theme
       theme: ThemeData(
-        primaryColor: Colors.red,
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -26,18 +26,13 @@ class MyApp extends StatelessWidget {
 // E. StatefulWidgetを継承したクラス
 class MyHomePage extends StatefulWidget {
   // コンストラクター
-  MyHomePage({Key key, String title})
-      : this.title = title,
-        super(key: key);
+  MyHomePage({Key key, this.title}) : super(key: key);
 
   // 受け取った文字列の入れ物
   final String title;
 
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return null;
-  }
+  State<StatefulWidget> createState() => _MyHomePageState();
 }
 
 // F. Stateを継承したクラス
